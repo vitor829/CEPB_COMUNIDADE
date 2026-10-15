@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" type="image/png" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Rajdhani', Arial, sans-serif;
+            background-color: #0a0e17;
+            /* Fundo com tema de malha cibernética e tom escuro */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(0, 243, 255, 0.08) 0%, transparent 60%),
+                linear-gradient(rgba(10, 14, 23, 0.85), rgba(10, 14, 23, 0.95)), 
+                url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: rgba(13, 19, 33, 0.9);
+            backdrop-filter: blur(8px);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #00f3ff;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .botao {
+            background-color: transparent;
+            color: #00f3ff;
+            border: 2px solid #00f3ff;
+            padding: 10px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;  
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(0, 243, 255, 0.2);
+        }
+
+        .botao:hover {
+            background-color: #00f3ff;
+            color: #0a0e17;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .conteudo {
+            text-align: center;
+            max-width: 850px;
+            margin: 80px auto;
+            padding: 40px 20px;
+            background: rgba(13, 19, 33, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .h1 {
+            color: #ffffff;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #d1d5db;
+        }
+
+        .span {
+            color: #00f3ff;
+            text-shadow: 0 0 12px rgba(0, 243, 255, 0.7);
+        }
+        .tamanho-texto {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><span>HARDWARE</span></div>
+        <nav>
+            <button class="botao" onclick="window.location.href='index.html'">Início</button>
+            <button class="botao" onclick="window.location.href='componentes.html'">Componentes</button>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <h1 class="h1">MAXIMUM PERFORMANCE, <span class="span">ZERO LIMITS</span></h1>
+        <p class="tamanho-texto">O hardware é toda a parte física do computador: tudo o que você consegue tocar e ver, por dentro e por fora. <br>
+Fazendo uma analogia simples para a escola: se o software (jogos, aplicativos e o Windows) são as ideias e os pensamentos, o hardware é o corpo humano, com braços, pernas e o cérebro de verdade! <br>
+São peças como o teclado, o monitor, o processador e o armazenamento que dão vida à tecnologia.</p> 
+    </main>
+
+</body>
+</html>
