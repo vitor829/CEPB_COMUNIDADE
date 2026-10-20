@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processador</title>
+    <style>
+        body {
+            background-size: cover;
+            background-image: linear-gradient(rgba(10, 10, 25, 0.85), rgba(10, 10, 25, 0.85)), url('./Img/fundo_tech.jpg');
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #0a0a19;
+        }
+
+        header {
+            background-color: #111126;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #00f0ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #00f0ff;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .botao {
+            background-color: transparent;
+            color: #00f0ff;
+            border: 2px solid #00f0ff;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #00f0ff;
+            color: #111126;
+        }
+
+        .h1 {
+            color: white;
+            font-size: 40px;
+            margin: 40px auto;
+            max-width: 600px;
+            text-align: center;
+            border-style: outset;
+            border-color: #00bfff;
+            border-width: 5px;
+            border-radius: 4px;
+            padding: 12px 28px;
+            background-color: #050510;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .h2 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .conteudo-principal {
+            display: flex;
+            flex-direction: column; /* Coloca os itens um abaixo do outro */
+            align-items: center;     /* Centraliza horizontalmente */
+            text-align: center;      /* Centraliza os textos */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            gap: 25px;
+            background-color: rgba(20, 20, 45, 0.6);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .imagem-principal {
+            height: 250px;
+            width: 250px;
+            border-radius: 8px;
+            border: 2px solid #00f0ff;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .imagem-principal:hover {
+            transform: scale(1.05); /* Pequeno zoom indicando que é clicável */
+        }
+
+        p {
+            font-weight: normal;
+            line-height: 1.6;
+            color: #d1d1e0;
+            text-align: center; /* Centralizado para combinar com o bloco */
+            max-width: 700px;
+        }
+
+        /* Definição exata do tamanho do texto em pixels (px) */
+        .tamanho-texto {
+            font-size: 30px; /* Altere aqui para o tamanho em px desejado (ex: 18px, 22px, etc) */
+        }
+
+        .span {
+            color: #00f0ff;
+        }
+
+        .botao3 {
+            background-color: #111126;
+            color: #00f0ff;
+            border: 2px solid #00f0ff;
+            padding: 20px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao3:hover {
+            background-color: #00f0ff;
+            color: #111126;
+        }
+
+        /* Estilo da Janela de Zoom (Modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-conteudo {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80vh;
+            border-radius: 8px;
+            border: 3px solid #00f0ff;
+        }
+
+        .fechar-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #00f0ff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .fechar-modal:hover {
+            color: white;
+        }
+
+        b {
+            color: #00f0ff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><span>HARDWARE</span></div>
+        <nav>
+            <button class="botao" onclick="window.location.href='index.html'">Início</button>
+            <button class="botao" onclick="window.location.href='componentes.html'">Componentes</button>
+        </nav>
+    </header>
+        
+    <h1 class="h1"><span class="span">processador</span></h1>
+
+    <div class="conteudo-principal">
+        <h2 class="h2">O que é <span class="span">processador?</span></h2>
+        
+        <!-- Imagem colocada em cima do texto -->
+        <img src="./Img/cpu.jpeg" alt="Imagem de uma CPU" class="imagem-principal" id="imgZoom">
+        
+        <p class="tamanho-texto">
+           O <b>processador</b> é a peça mais importante para o funcionamento do computador. Ele é considerado o verdadeiro "cérebro" da máquina.
+        </p>
+    </div>
+    <div id="modalZoom" class="modal" onclick="fecharZoom()">
+        <span class="fechar-modal">&times;</span>
+        <img class="modal-conteudo" id="imgAmpliada">
+    </div>
+
+    <br><br><br><br>
+    <center>
+        <button class="botao3" onclick="window.location.href='componentes.html'">Voltar</button>
+    </center>
+    <br><br><br>
+
+    <script>
+        // Script simples para abrir e fechar o zoom da imagem
+        const modal = document.getElementById("modalZoom");
+        const img = document.getElementById("imgZoom");
+        const modalImg = document.getElementById("imgAmpliada");
+
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        function fecharZoom() {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
